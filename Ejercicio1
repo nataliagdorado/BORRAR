@@ -1,0 +1,32 @@
+class Punto3D {
+    private int x;
+    private int y;
+    private int z;
+
+    public Punto3D() {
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
+    }
+
+    public Punto3D(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ", " + z + ")";
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Punto3D punto1 = new Punto3D(12, 13, 18);
+        Punto3D punto2 = new Punto3D(8, 14, 0);
+
+        System.out.println("Punto 1: " + punto1);
+        System.out.println("Punto 2: " + punto2);
+    }
+}
