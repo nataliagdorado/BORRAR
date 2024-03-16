@@ -1,32 +1,88 @@
-class Punto3D {
-    private int x;
-    private int y;
-    private int z;
+import java.util.Date;
+import java.util.Scanner;
 
-    public Punto3D() {
-        this.x = 0;
-        this.y = 0;
-        this.z = 0;
-    }
-
-    public Punto3D(int x, int y, int z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
-
-    @Override
-    public String toString() {
-        return "(" + x + ", " + y + ", " + z + ")";
-    }
-}
-
-public class Main {
+public class Experimento {
     public static void main(String[] args) {
-        Punto3D punto1 = new Punto3D(12, 13, 18);
-        Punto3D punto2 = new Punto3D(8, 14, 0);
-
-        System.out.println("Punto 1: " + punto1);
-        System.out.println("Punto 2: " + punto2);
+    
+    public enum Luminosidad {
+        ALTA,
+        MEDIA,
+        BAJA
     }
+    
+    private String nombre;
+    private int numBacterias;
+    private double temperatura;
+    private Luminosidad luminosidad;
+    private int dosisComida;
+
+    // Constructor
+    public Experimento(String nombre, int numBacterias, double temperatura, Luminosidad luminosidad, int dosisComida) {
+        this.nombre = nombre;
+        this.numBacterias = numBacterias;
+        this.temperatura = temperatura;
+        this.luminosidad = luminosidad;
+        this.dosisComida = dosisComida;
+    }
+    
+    // Getters
+    public String getNombre() {
+        return nombre;
+    }
+    
+    
+    public int getNumBacterias() {
+        return numBacterias;
+    }
+    
+    public double getTemperatura() {
+        return temperatura;
+    }
+    
+    public Luminosidad getLuminosidad() {
+        return luminosidad;
+    }
+    
+    public int getDosisComida() {
+        return dosisComida;
+    }
+    
+    
+    // Setters
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    public void setNumBacterias(int numBacterias) {
+        this.numBacterias = numBacterias;
+    }
+    
+    public void setTemperatura(double temperatura) {
+        this.temperatura = temperatura;
+    }
+    
+    public void setLuminosidad(Luminosidad luminosidad) {
+        this.luminosidad = luminosidad;
+    }
+    
+    public void setDosisComida(int dosisComida) {
+        this.dosisComida = dosisComida;
+    }
+    
+    // Métodos
+    public void crearExperimento(){
+            
+
+            // Crear el objeto Experimento con los valores ingresados por el usuario
+            Experimento experimento = new Experimento(nombre, fechaInicio, fechaFin, numBacterias, temperatura, luminosidad, dosisComida);
+
+            return experimento;
+}
+    gestionarPoblacion();
+    guardarArchivo();
+    crearPoblacion();
+    visualizarPoblaciones();
+    borrarPoblacion();
+    verDetallesPoblacion();
+}
 }
